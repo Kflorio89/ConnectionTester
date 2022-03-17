@@ -36,6 +36,8 @@ namespace ConnectionTester
             this.btnStop = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
+            this.txtTimeout = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblIP
@@ -93,11 +95,30 @@ namespace ConnectionTester
             this.txtOutput.Size = new System.Drawing.Size(857, 450);
             this.txtOutput.TabIndex = 6;
             // 
+            // txtTimeout
+            // 
+            this.txtTimeout.Location = new System.Drawing.Point(781, 12);
+            this.txtTimeout.Name = "txtTimeout";
+            this.txtTimeout.Size = new System.Drawing.Size(100, 26);
+            this.txtTimeout.TabIndex = 7;
+            this.txtTimeout.Text = "100";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(709, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Timeout";
+            // 
             // FrmConnectionTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 602);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtTimeout);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtIP);
             this.Controls.Add(this.btnStop);
@@ -120,6 +141,8 @@ namespace ConnectionTester
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.TextBox txtOutput;
+        private System.Windows.Forms.TextBox txtTimeout;
+        private System.Windows.Forms.Label label1;
     }
 }
 

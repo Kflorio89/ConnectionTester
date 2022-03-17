@@ -9,22 +9,51 @@ namespace ConnectionTester
 {
     public partial class FrmConnectionTester : Form
     {
-        private CancellationTokenSource src;
-        private CancellationToken token;
-        public const int TimeOut = 100;
+        private CancellationTokenSource _src;
+        private CancellationToken _token;
+        public const int DefaultTimeOut = 100;
+        private static int _timeOut;
+        private static object _lock = new object();
+        public static int TimeOut
+        {
+            get
+            {
+                return _timeOut;
+            }
+            private set
+            {
+                lock (_lock)
+                {
+                    _timeOut = value;
+                }
+            }
+        }
 
         public FrmConnectionTester()
         {
             InitializeComponent();
+            _timeOut = DefaultTimeOut;
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            src = new CancellationTokenSource();
-            token = src.Token;
+            _src = new CancellationTokenSource();
+            _token = _src.Token;
             btnStart.Enabled = false;
+
             try
             {
+                if (!int.TryParse(txtTimeout.Text.Trim(), out int to))
+                {
+                    TimeOut = DefaultTimeOut;
+                    MessageBox.Show($"Timeout could not be read as a number, set to default: {DefaultTimeOut}", "Warning: Timeout");
+                    txtTimeout.Text = DefaultTimeOut.ToString();
+                }
+                else
+                {
+                    TimeOut = to;
+                }
+
                 string ipadd = txtIP.Text.Trim();
                 if (string.IsNullOrWhiteSpace(ipadd) || !IPAddress.TryParse(ipadd, out IPAddress addr))
                 {
@@ -32,7 +61,7 @@ namespace ConnectionTester
                 }
                 else
                 {
-                    Task.Run(() => TestConnection(token, ipadd), token);
+                    Task.Run(() => TestConnection(_token, ipadd), _token);
                 }
             }
             catch (Exception ex)
@@ -46,7 +75,7 @@ namespace ConnectionTester
         {
             try
             {
-                src.Cancel();
+                _src.Cancel();
             }
             catch (Exception ex)
             {

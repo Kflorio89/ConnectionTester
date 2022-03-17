@@ -7,3 +7,4 @@ C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\Connecti
 C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.csproj.CoreCompileInputs.cache
 C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.exe
 C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.pdb
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.csproj.AssemblyReference.cache
