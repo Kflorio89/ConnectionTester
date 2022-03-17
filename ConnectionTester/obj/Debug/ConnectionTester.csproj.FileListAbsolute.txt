@@ -1,0 +1,9 @@
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\bin\Debug\ConnectionTester.exe.config
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\bin\Debug\ConnectionTester.exe
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\bin\Debug\ConnectionTester.pdb
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.frmConnectionTester.resources
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.Properties.Resources.resources
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.csproj.GenerateResource.cache
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.csproj.CoreCompileInputs.cache
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.exe
+C:\Users\kflor\source\repos\ConnectionTester\ConnectionTester\obj\Debug\ConnectionTester.pdb
